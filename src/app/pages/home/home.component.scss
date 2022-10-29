@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background: azure;
+}
+
+main, section {
+  flex: 1;
+}
