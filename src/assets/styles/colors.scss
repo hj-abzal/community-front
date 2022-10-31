@@ -1,0 +1,47 @@
+@import "var";
+
+.green {
+  background: $green !important;
+  color: white !important;
+}
+
+.blue {
+  background: $blue !important;
+  color: white !important;
+
+  &:hover {
+    background: $blue;
+  }
+}
+
+.red {
+  background: $red !important;
+  color: white !important;
+}
+
+.yellow {
+  background: $yellow !important;
+  color: black !important;
+}
+
+.black {
+  background: $black !important;
+  color: white !important;
+}
+
+.mat-button-disabled {
+  background: $disableBg !important;
+  box-shadow: none !important;
+
+  &:hover {
+    background: $disableBg !important;
+  }
+
+  &.red, &.green, &.blue, &.yellow &.black {
+    color: $disableText !important;
+  }
+}
+
+.yellowIcon {
+  color: #ffc633;
+}

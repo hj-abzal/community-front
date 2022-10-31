@@ -1,3 +1,130 @@
-:host {
-  background: blueviolet;
+@import "flex-temp";
+@import "mixins";
+@import "colors";
+@import "var";
+
+.wrapper {
+  height: 100%;
+  position: relative;
+  transition: 200ms ease-in-out;
+}
+
+.toggle {
+  @extend %flexCenter;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  @include TBLR(37px, none, none, -15px);
+  border-radius: 50%;
+  border: none;
+  background: #63CFFF;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  z-index: $toggleButtonIndex;
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar {
+  @extend %flex;
+  flex-direction: column;
+  position: absolute;
+  @include TBLR();
+  overflow: hidden;
+  z-index: $toolbarIndex;
+  background: rgb(118, 106, 200);
+
+
+  .line {
+    width: 3px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    background: white;
+    border-radius: 4px;
+    transition: 500ms ease-in-out;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+    .icon {
+      margin-left: 15px;
+      text-align: center;
+      img {
+        width: 30px;
+      }
+    }
+
+    .text {
+      position: absolute;
+      left: 60px;
+      white-space: nowrap;
+    }
+  }
+
+  .logotype {
+    margin-bottom: 1px;
+    cursor: default !important;
+
+    i {
+      font-size: 30px;
+    }
+
+    .text {
+      font-size: 19px;
+      font-weight: 600;
+    }
+  }
+
+  .menu {
+    &:hover {
+      background: rgba(0, 0, 0, .04);
+    }
+
+    i {
+      font-size: 22px;
+    }
+
+    .text {
+      font-size: 15px;
+    }
+  }
+
+  .active {
+    background: rgba(0, 0, 0, .12);
+
+    &:hover {
+      background: rgba(39, 38, 38, 0.12);
+    }
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .log-out {
+    &:hover {
+      background: rgba(0, 0, 0, .04);
+    }
+
+    margin-bottom: 1px;
+
+    i {
+      font-size: 30px;
+    }
+
+    .text {
+      font-size: 19px;
+    }
+  }
 }

@@ -1,1 +1,37 @@
-<p>navbar works!</p>
+<div [style.width.px]="show ? 250 : 60" class="wrapper">
+  <button (click)="show = !show" class="toggle" matRipple>
+    <i class="icon-{{show ? 'left' : 'right'}}"></i>
+  </button>
+
+  <div class="navbar">
+    <div class="logotype item">
+      <div class="icon">
+        <img src="./assets/images/logo-ffwp.png" alt="">
+      </div>
+      <div *ngIf="show" class="text">Smart Community</div>
+    </div>
+
+    <div
+      *ngFor="let m of menu; trackBy: trackByIndex"
+      [routerLink]="[m.route]"
+      [class.active]="isActiveMenu(m.route)"
+      class="menu item"
+      matRipple
+    >
+      <div [class.line]="isActiveMenu(m.route)"></div>
+      <div class="icon">
+        <i class="icon-{{m.icon}}{{isActiveMenu(m.route) ? '-filled' : ''}}"></i>
+      </div>
+      <div *ngIf="show" class="text">{{m.title}}</div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="item log-out">
+      <div class="icon">
+        <i class="icon-logout"></i>
+      </div>
+      <div *ngIf="show" class="text">Kozhakhmet Abzal</div>
+    </div>
+  </div>
+
+</div>
