@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {HomeRoutingModule} from "./home-routing.module";
-import {HOME_MODULES} from "./components";
+import {SHARED_STAND_ALONE_COMPONENTS} from "../../shared/components";
+import {HOME_STAND_ALONE_COMPONENTS} from "./components";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {HOME_MODULES} from "./components";
   imports: [
     CommonModule,
     HomeRoutingModule,
-    HOME_MODULES
+    SHARED_STAND_ALONE_COMPONENTS,
+    HOME_STAND_ALONE_COMPONENTS
   ]
 })
 export class HomeModule { }

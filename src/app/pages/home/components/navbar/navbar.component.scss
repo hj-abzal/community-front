@@ -7,6 +7,7 @@
   height: 100%;
   position: relative;
   transition: 200ms ease-in-out;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
 
 .toggle {
@@ -16,9 +17,9 @@
   position: absolute;
   @include TBLR(37px, none, none, -15px);
   border-radius: 50%;
-  border: none;
-  background: #63CFFF;
-  color: white;
+  background: white;
+  border: 1px solid;
+  color: rgb(118, 106, 200);;
   cursor: pointer;
   outline: none;
   z-index: $toggleButtonIndex;
@@ -35,7 +36,6 @@
   @include TBLR();
   overflow: hidden;
   z-index: $toolbarIndex;
-  background: rgb(118, 106, 200);
 
 
   .line {

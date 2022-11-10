@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-members',
+  selector: 'app-budget-control',
   templateUrl: './budget-control.component.html',
   styleUrls: ['./budget-control.component.scss']
 })

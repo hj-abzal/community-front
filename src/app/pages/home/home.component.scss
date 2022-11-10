@@ -8,8 +8,5 @@
 main {
   display: flex;
   flex-direction: column;
-}
-
-main, section {
   flex: 1;
 }

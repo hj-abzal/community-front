@@ -1,13 +1,19 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 import {Menu} from "../../home.model";
 import {TrackBy} from "../../../../shared/utils/trackBy";
-import {NavigationEnd, Router} from "@angular/router";
+import {NavigationEnd, Router, RouterLink} from "@angular/router";
 import {filter} from "rxjs";
+import {CommonModule} from "@angular/common";
 
 @Component({
+  standalone: true,
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  imports: [
+    RouterLink,
+    CommonModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent  extends TrackBy implements OnInit {

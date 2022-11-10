@@ -1,4 +1,3 @@
-import {HeaderModule} from "./header/header.module";
-import {NavbarModule} from "./navbar/navbar.module";
+import {NavbarComponent} from "./navbar/navbar.component";
 
-export const HOME_MODULES = [HeaderModule, NavbarModule]
+export const HOME_STAND_ALONE_COMPONENTS = [NavbarComponent]
